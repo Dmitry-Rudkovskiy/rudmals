@@ -1,0 +1,68 @@
+@font-face {
+    font-family: ComfortaLight;
+    src: url(../fonts/Comfortaa-Light.ttf);
+   }
+   @font-face {
+    font-family: ComfortaRegular;
+    src: url(../fonts/Comfortaa-Regular.ttf);
+   }
+   @font-face {
+    font-family: ComfortaBold;
+    src: url(../fonts/Comfortaa-Bold.ttf);
+   }
+
+body{
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    cursor: url(../cursors/cursors-default.svg), default;
+}
+
+*{
+    outline: none;
+    font-family: ComfortaRegular;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    opacity: 1;
+}
+a:hover{
+    opacity: 0.8; 
+}
+
+h1, h2, h3, h4, h5, h6, p, label {
+    color: #fff;
+}
+
+.Loader{
+    width: 100%;
+    height: 100vh;
+    & .LoaderRudmals{
+        width: 100%;
+        height: 100%; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & img{
+            width: 150px;
+            animation: 3s animeLoader infinite;
+        }
+    }
+}
+
+
+@keyframes animeLoader {
+    0% {
+      -webkit-transform: scale(1);
+      opacity: 0;
+    }
+    50% {
+      -webkit-transform: scale(1.4);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+      opacity: 0;
+    }
+  }

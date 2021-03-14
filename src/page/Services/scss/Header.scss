@@ -1,0 +1,14 @@
+.Header{
+    & .Header-Container{
+        display: flex;
+        align-items: center;
+        & .btn-close{
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+            & img{
+                width: 40%
+            }
+        }
+    }
+}

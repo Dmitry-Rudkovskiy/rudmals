@@ -1,0 +1,70 @@
+.Form{
+    & form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & select {
+            appearance: checkbox;
+          } 
+
+        & .Input-Label{
+            display: flex;
+            flex-direction: column;
+            width: 65%;
+            margin:  10px 0;
+            & label{
+                font-size: 14px;
+                margin: 4px 0;
+            }
+            & .Input-Style{
+                width: auto;
+                background: #FFFFFF;
+                border-radius: 10px;   
+                min-height: 50px;  
+                border: none;   
+                padding: 3px 10px 3px 10px;
+                resize: none;
+            }
+        }
+    & .submit{
+        & button{
+            padding: 15px 30px;
+            background-color: #3B4495;
+            border-radius: 10px;
+            border: none;
+            color: #FFFFFF;
+            margin: 15px  0 0 0;
+        }
+    }
+}
+}
+
+@media screen and (max-width: 1024px){
+    .Form{
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 560px){
+    .Form{
+        & form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & select {
+                appearance: checkbox;
+              } 
+    
+            & .Input-Label{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin:  10px 0;
+                & label{
+                    font-size: 14px;
+                    margin: 4px 0;
+                }
+            }
+        
+    }
+    }
+}

@@ -1,0 +1,29 @@
+.NavigationServices{
+    display: flex;
+    flex-direction: column;
+    & .btn{
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+        color: #ffffff;
+        & img{
+            width: 1em;
+            margin: 0 10px 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1224px){
+    .NavigationServices{
+        flex-direction: row;
+        & .btn{
+            margin: 20px 15px;
+            border: 1px solid #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            & img{
+               display: none;
+            }
+        }
+    }
+}

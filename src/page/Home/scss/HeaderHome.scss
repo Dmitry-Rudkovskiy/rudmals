@@ -1,0 +1,43 @@
+.Menu{
+    display: none;
+}
+.Header-Home{
+   & .Container{
+       & .Logo-Name{
+           display: flex;
+           align-items: center;
+           & img{
+               width: 70px;
+           }
+          & h2{
+              margin: 0 0 0 20px;
+            letter-spacing: 4px;
+          }
+       }
+   } 
+   & hr{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+   }
+}
+@media screen and (max-width: 1024px) {
+    .Header-Home{
+        & .Container{
+            & .Logo-Name{
+                justify-content: center;
+                padding: 10px;
+                & img{
+                    width: 70px;
+                }
+                & h2{
+                    display: none;
+                }
+            }
+        } 
+     }
+}
+@media screen and (max-width: 768px){
+    .Menu{
+        position: absolute;
+        display: block;
+    }
+}

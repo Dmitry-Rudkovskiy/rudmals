@@ -1,0 +1,19 @@
+.ImgRight{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+       align-items: center;
+       justify-content: center;
+   & .Img-Man{
+       display: flex;
+       justify-content: center;
+       & img{
+           width: 75%;
+       }
+   } 
+}
+@media screen and (max-width: 1024px) {
+    .ImgRight{
+    display: none;
+}
+}

@@ -1,0 +1,42 @@
+.Navigation{
+    & .Navigation-Container{
+        & .Button-nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & .btn{
+                border: none;
+                background: #5899FE;
+                border-radius: 10px;
+                padding: 10px 30px;
+                color: #FFFFFF;
+                margin: 0 10px 0 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .Navigation{
+        & .Navigation-Container{
+            & .Button-nav{
+                & .btn{
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .Close{
+        position: absolute;
+        left: 0px;
+    }
+    .Navigation{
+        & .Navigation-Container{
+            & .Button-nav{
+                flex-direction: column;
+            }
+        }
+    }
+}

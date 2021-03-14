@@ -1,0 +1,28 @@
+.Text-Home{
+    & hr{
+        margin-top: 30px;
+        margin-bottom: 50px;
+        width: 15%;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .Text-Home{
+        padding: 20px;
+        & hr{
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .Text-Home{
+        & hr{
+            margin-top: 30px;
+        margin-bottom: 10px;
+        width: 20%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    }
+}
