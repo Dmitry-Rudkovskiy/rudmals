@@ -1,7 +1,7 @@
 import "../scss/Navigation.scss";
 import { Link } from 'react-router-dom';
 
-function Navigation() {
+function Navigation(props) {
     return (
          <>
          <div className="Navigation">
@@ -17,7 +17,7 @@ function Navigation() {
         </Link>
 
 
-        <Link to="/portfolio" className="btn">
+        <Link onClick ={props.showModalClick} className="btn">
          Контакты   
         </Link>
        

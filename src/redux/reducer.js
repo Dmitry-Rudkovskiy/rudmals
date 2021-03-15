@@ -6,6 +6,7 @@ const initialState = {
     showImg3: false,
     showMenu: null,
     showMenuBurger: null,
+    showModal: false,
 }
 export function counterReducer(state = initialState , action) {
     switch (action.type) {
@@ -45,6 +46,10 @@ export function counterReducer(state = initialState , action) {
                 case 'SHOW_MENU_BURGER':
                     return { 
                         ...state, showMenuBurger: action.payload
+                    }
+                    case 'SHOW_MODAL':
+                    return { 
+                        ...state, showModal: action.payload
                     }
             
       default:

@@ -11,11 +11,13 @@ import {
   SHOW_IMG_3,
   SHOW_MENU, 
   SHOW_MENU_BURGER,
+  SHOW_MODAL,
   } from "../../redux/action";
 import {
   TextHome,
   HeaderHome,
   Form, 
+  Contact,
   ImgRight, 
   Navigation, 
   Social
@@ -31,7 +33,8 @@ function Home() {
      showDevelopDesing,
      showImg1,
      showImg2,
-     showImg3
+     showImg3,
+     showModal
   } = useSelector(state => state )
 
 //controlForm
@@ -78,12 +81,6 @@ function Home() {
       }
     } 
 
-
-
-
-
-
-
     const styleMenu = {
       display: showMenu
   
@@ -99,8 +96,20 @@ function Home() {
       dispatch(SHOW_MENU_BURGER('block'))
     }
 
+
+const showModalClick = () =>{
+  dispatch(SHOW_MODAL(true))
+}
+const noShowModalClick = () =>{
+  dispatch(SHOW_MODAL(false))
+}
+
+
     return (
       <div className="Home">
+                {!showModal == false ? <Contact 
+                noShowModalClick = {noShowModalClick}
+                />: null}
         <div className="Container">
         <div className="Section-Left">
         <div className="Section-Left-Container">
@@ -130,7 +139,9 @@ function Home() {
 
         <div className="Section-Right-Container">
         <div className="Container-fixed">
-        <Navigation />
+        <Navigation 
+        showModalClick = {showModalClick}
+        />
         <ImgRight
         showImg1 = {showImg1}
         showImg2 = {showImg2}

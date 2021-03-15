@@ -5,6 +5,7 @@ import Portfolio from "./Portfolio/Portfolio";
 
 /*Components*/
 import Header from "./Services/components/Header";
+import Contact from "./Home/components/Contact";
 
 /*Components Home*/
 import HeaderHome from "./Home/components/HeaderHome";
@@ -40,6 +41,7 @@ export {
     Navigation, 
     Social, 
     Header,
+    Contact,
     WelcomeServices,
     NavigationServices1,
     NavigationServices2,

@@ -21,7 +21,7 @@
                 }
             }
                 & img{
-                    width: 300px;
+                    width: 40%;
                     margin: 0 0 0 10px;
             }
         }
@@ -47,12 +47,26 @@
                     text-align: left;
                 }
                     & img{
-                        width: 80%;
                         margin: 20px 0;
                     }
             }
         
                 
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 768px){
+    .SectionServices{
+        & .SectionServices-fone{
+            & .SectionServices-Container{
+            & .services-text{
+                    & img{
+                        width: 100%;
+                    }
+            }   
             }
         }
         

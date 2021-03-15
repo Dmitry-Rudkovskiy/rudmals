@@ -40,12 +40,19 @@ export const SHOW_MENU = (act) => {
     }
     
   }
+
 export const SHOW_MENU_BURGER = (act) => {
     return {
         type: 'SHOW_MENU_BURGER',
         payload: act
-    }
-   
+    }   
+  }
+
+  export const SHOW_MODAL = (act) => {
+    return {
+        type: 'SHOW_MODAL',
+        payload: act
+    }   
   }
 
 
