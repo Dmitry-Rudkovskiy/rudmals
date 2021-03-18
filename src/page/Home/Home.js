@@ -1,5 +1,7 @@
 
 import {useState } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 import { useDispatch, useSelector } from "react-redux";
 import Close from "../svg/close.svg";
 import "./scss/Home.scss";
@@ -25,10 +27,13 @@ import {
 
 function Home() {
 
+  AOS.init();
+
 
   const dispatch = useDispatch()
   const {
      showMenu,
+     showMenuBurger,
      showSiteDevelopForm,
      showDevelopDesing,
      showImg1,
@@ -106,16 +111,21 @@ const noShowModalClick = () =>{
 
 
     return (
-      <div className="Home">
+      <div className="Home"
+      style = {{overflow: !showModal == false ? 'hidden' : null &&
+      !showModal == true ? 'scroll' : null
+      }}
+      >
                 {!showModal == false ? <Contact 
                 noShowModalClick = {noShowModalClick}
                 />: null}
         <div className="Container">
-        <div className="Section-Left">
+        <div className="Section-Left" data-aos="fade-right">
         <div className="Section-Left-Container">
 
         <HeaderHome 
         showBlockMenu = {showBlockMenu}
+        showMenuBurger = {showMenuBurger}
         />
         <TextHome />
         <Form
@@ -131,7 +141,7 @@ const noShowModalClick = () =>{
             </div>
         </div>
 
-        <div className="Section-Right" style={styleMenu}>
+        <div className="Section-Right" style={styleMenu} data-aos="fade-left">
 
         <div className="Close" onClick={NOshowBlockMenu}>
       <img src={Close} alt="Close"/>

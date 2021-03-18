@@ -14,6 +14,16 @@
 }
 @media screen and (max-width: 1024px){
     .Social{
+        display: none;
+        // & .Container{
+        //     flex-direction: row;
+        //     margin: 20px 0 5px 0;
+        // }
+    } 
+}
+@media screen and (max-width: 768px){
+    .Social{
+        display: block;
         & .Container{
             flex-direction: row;
             margin: 20px 0 5px 0;

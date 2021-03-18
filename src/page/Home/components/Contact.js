@@ -1,16 +1,24 @@
 import "../scss/Contact.scss";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 import ContactPNG from "../../../img/Contact.png";
 import { Social } from "../../import";
 import Close from "../../svg/close.svg";
 
+
 function Contact(props) {
+
+  AOS.init()
     return (
       <>
-         <div className="Contact">
+      <div className="blur">
+
+      </div>
+         <div className="Contact" data-aos="zoom-in">
            <div className="Container">
            <div className="Contact_info">
            <div className="Close">
-           <img src={Close} onClick={props.noShowModalClick} alt="Close"/>
+           <a href="#"><img src={Close} onClick={props.noShowModalClick} alt="Close"/></a>
            </div>
                <img className="ContactIMG" src={ContactPNG} />
                <p>Звонки принимаем с 9 00 до 21 00</p>

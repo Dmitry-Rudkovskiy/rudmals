@@ -7,6 +7,7 @@ import {Switch, Route} from 'react-router-dom'
 
 
 function App() {
+
   const [showLoader, setShowLoader] = useState(true)
 
     setTimeout(() => {
@@ -26,7 +27,7 @@ function App() {
     </div> : <Switch>
     <div className="App">
     <Route exact path="/" component={Home} />
-    <Route exact path="/services" component={Services} />
+    <Route exact path="/services" component={Services}/>
     <Route exact path="/portfolio" component={Portfolio} />
     </div>
     </Switch>}

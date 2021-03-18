@@ -1,18 +1,15 @@
-import { useEffect, useState } from "react";
 import "./scss/Portfolio.scss";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 import {Header, WelcomePortfolio, SectionPortfolio} from "../import";
 
 function Portfolio() {
-  const [showLoader, setShowLoader] = useState(true)
 
-  useEffect(() => {
-    setShowLoader(false)
-  }, [])
+  AOS.init();
+
     return (
-      <>
-      {showLoader ? <div className="Loader">
-      </div> : 
-      <div className="Portfolio">
+      <> 
+      <div className="Portfolio" data-aos="zoom-in">
         <div className="Portfolio-Container">
         <div className="Portfolio-Welcome">
         <Header />
@@ -23,7 +20,6 @@ function Portfolio() {
          <SectionPortfolio />
       </div>
       </div>
-    }
        </>
     );
   }

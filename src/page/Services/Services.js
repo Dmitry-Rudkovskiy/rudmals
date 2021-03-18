@@ -1,9 +1,21 @@
 import "./scss/Services.scss";
-import {Header, WelcomeServices, NavigationServices1, NavigationServices2, SectionServices} from "../import";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import {
+  Header, 
+  WelcomeServices,
+  NavigationServices1,
+  NavigationServices2,
+  SectionServices
+    } from "../import";
 
 function Services() {
+
+  AOS.init();
+
     return (
-      <div className="Services">
+   <>
+      <div className="Services" data-aos="zoom-in">
         <div className="Services-Container">
         <div className="Services-Welcome">
         <Header />
@@ -16,6 +28,9 @@ function Services() {
          <SectionServices />
       </div>
       </div>
+
+      </>
+
     );
   }
   
