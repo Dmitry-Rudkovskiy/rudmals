@@ -87,8 +87,7 @@ function Home() {
     } 
 
     const styleMenu = {
-      display: showMenu
-  
+      display: showMenu,
     }
 
     const showBlockMenu = () =>{
